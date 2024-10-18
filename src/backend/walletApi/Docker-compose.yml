@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  database-mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wallet
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - '3307:3306'
+    expose:
+      - 3306
