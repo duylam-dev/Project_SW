@@ -19,10 +19,6 @@ public class Wallet {
     private String username;
     private Double accountBalance;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "phone_number", referencedColumnName = "phoneNumber")
-    private User user;
-
     @OneToMany(mappedBy = "wallet")
     private List<Transaction> transactions;
 }

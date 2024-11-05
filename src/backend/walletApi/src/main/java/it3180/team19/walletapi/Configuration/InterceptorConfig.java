@@ -1,6 +1,6 @@
 package it3180.team19.walletapi.Configuration;
 
-import it3180.team19.walletapi.Util.LoginInterceptor;
+import it3180.team19.walletapi.Util.AuthInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,8 +14,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
     private String[] noCheckURL;
 
     @Bean
-    LoginInterceptor getLoginInterceptor() {
-        return new LoginInterceptor();
+    AuthInterceptor getLoginInterceptor() {
+        return new AuthInterceptor();
     }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

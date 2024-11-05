@@ -19,9 +19,11 @@ public class User {
     private String email;
     private String userId;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "wallet_id")
+    private Wallet wallet;
     @OneToMany(mappedBy = "user")
     private List<Bill> bills;
-
 
     @OneToMany(mappedBy = "user")
     private List<BankUser> bankUsers;

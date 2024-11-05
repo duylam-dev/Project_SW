@@ -6,19 +6,12 @@ import lombok.experimental.FieldDefaults;
 import java.util.List;
 import java.util.Map;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegistrationRequest {
-
-    String username;
-    String password;
-    String email;
-    String firstName;
-    String lastName;
-    String phoneNumber;
+public class BankUserCreationRequest {
     List<Map<String, Object>> infoBank;
+    String phoneNumber;
 }

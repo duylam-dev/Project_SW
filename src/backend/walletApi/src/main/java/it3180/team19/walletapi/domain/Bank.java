@@ -14,6 +14,7 @@ public class Bank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    private String code;
 
     @OneToMany(mappedBy = "bank")
     private List<BankUser> bankUsers;
