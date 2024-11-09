@@ -1,8 +1,11 @@
 package it3180.team19.walletapi.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -12,7 +15,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements Serializable {
     @Id
     private String phoneNumber;
     private String fullName;
@@ -26,6 +29,7 @@ public class User {
     private List<Bill> bills;
 
     @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private List<BankUser> bankUsers;
 
 }

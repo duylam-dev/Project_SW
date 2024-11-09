@@ -1,9 +1,8 @@
 package it3180.team19.walletapi.controller;
 
-import it3180.team19.walletapi.Util.SecurityUtil;
+
 import it3180.team19.walletapi.dto.ApiResponse;
 import it3180.team19.walletapi.dto.request.BankUserCreationRequest;
-import it3180.team19.walletapi.dto.request.RegistrationRequest;
 import it3180.team19.walletapi.service.BankUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor

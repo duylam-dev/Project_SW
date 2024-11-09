@@ -1,5 +1,12 @@
 version: '3.9'
 services:
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./storage/data_redis:/var/lib/redis
   database-mysql:
     image: mysql:8.0
     restart: always
@@ -10,3 +17,13 @@ services:
       - '3307:3306'
     expose:
       - 3306
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.0
+    command: ["start-dev", "--import-realm"]
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    ports:
+      - '8180:8080'
+    expose:
+      - 8180

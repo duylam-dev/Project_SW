@@ -33,12 +33,13 @@ public class BankUserService {
                         log.info("Bank not found");
                         throw new AppException(HttpStatus.NOT_FOUND.value(), "Bank not found");
                     }
-                    if(bankUserRepository.existByNumberAccountAndBankId(item.getOrDefault("numberAccount", " ").toString(), bank.getId())){
+                    if (bankUserRepository.existByNumberAccountAndCode(item.getOrDefault("numberAccount", " ").toString(), bank.getCode())) {
                         throw new AppException(HttpStatus.CONFLICT.value(), "Number Account already exists in a Bank");
                     }
                     bankUsers.add(BankUser.builder()
                             .user(userRepository.findById(bankUserCreationRequest.getPhoneNumber()).orElse(null))
                             .bank(bank)
+                            .balance(Double.parseDouble(item.getOrDefault("balance", 0.0).toString()))
                             .numberAccount(item.getOrDefault("numberAccount", " ").toString())
                             .build()
                     );
