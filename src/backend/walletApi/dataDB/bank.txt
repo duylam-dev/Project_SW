@@ -1,0 +1,16 @@
+INSERT INTO bank (name, code) VALUES
+('Ngân hàng TMCP Ngoại Thương Việt Nam (Vietcombank)', 'VCB'),
+('Ngân hàng TMCP Công Thương Việt Nam (VietinBank)', 'CTG'),
+('Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam (Agribank)', 'AGR'),
+('Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank)', 'TCB'),
+('Ngân hàng TMCP Quân đội (MB Bank)', 'MBB'),
+('Ngân hàng TMCP Á Châu (ACB)', 'ACB'),
+('Ngân hàng TMCP Đầu tư và Phát triển Việt Nam (BIDV)', 'BIDV'),
+('Ngân hàng TMCP Sài Gòn Thương Tín (Sacombank)', 'STB'),
+('Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank)', 'VPB'),
+('Ngân hàng TMCP Sài Gòn - Hà Nội (SHB)', 'SHB'),
+('Ngân hàng TMCP Tiên Phong (TPBank)', 'TPB'),
+('Ngân hàng TMCP Hàng Hải Việt Nam (MSB)', 'MSB'),
+('Ngân hàng TMCP Quốc Dân (NCB)', 'NCB'),
+('Ngân hàng TMCP Phát triển Nhà TP.HCM (HDBank)', 'HDB'),
+('Ngân hàng TMCP Bản Việt (Viet Capital Bank)', 'VCB');
